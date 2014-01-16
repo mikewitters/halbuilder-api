@@ -164,4 +164,6 @@ public interface ReadableRepresentation {
      */
     void toString(String contentType, final Set<URI> flags, Writer writer);
 
+    boolean isMultiValueExplicit();
+    
 }

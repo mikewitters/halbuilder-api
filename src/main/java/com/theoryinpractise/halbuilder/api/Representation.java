@@ -1,6 +1,7 @@
 package com.theoryinpractise.halbuilder.api;
 
 import java.net.URI;
+import java.util.Set;
 
 public interface Representation extends ReadableRepresentation {
 
@@ -25,5 +26,9 @@ public interface Representation extends ReadableRepresentation {
     Representation withNamespace(String namespace, String href);
 
     Representation withRepresentation(String rel, ReadableRepresentation resource);
+
+    Representation withRepresentation(String rel, ReadableRepresentation resource, boolean isMultiValue);
+
+    Representation withRepresentation(String rel, Set<ReadableRepresentation> resources);
 
 }
